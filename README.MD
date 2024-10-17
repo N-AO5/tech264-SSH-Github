@@ -56,3 +56,10 @@
 2.  ```git remote set-url origin git@github.com:N-AO5/tech264-cloud-linux.git``` to change your remote URL to SSH
 3.  Run the git remote -v command again and it should've changed
 4.  you should be able to commit and push
+   
+# Reopen bash window - permissions denied
+this is because ssh agent process ends when you close the bash window, you have to restart the process
+
+1.  run the eval egent again  ``` eval `ssh-agent -s` ```
+2.  re register our private key & ```ssh-add *your key name*```
+   
